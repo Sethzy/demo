@@ -11,13 +11,13 @@ export default function DashboardLayout({
       <div className="w-full flex-none md:w-64">
         <SideNav />
       </div>
-
+      console.log('Dashboard Layout');
       {/* Dashboard Layout's Main Content Area */}
       <div className="flex-grow p-6 md:overflow-y-auto md:p-12">
         {/* Dashboard Layout's Header */}
         <div className="mb-6 border-b border-gray-200 pb-4">
           <h1 className="text-2xl font-bold text-gray-900">
-            Dashboard Layout Header
+            Dashboard ds Layout Header
           </h1>
           <p className="text-sm text-gray-600">
             This header appears on ALL dashboard pages
