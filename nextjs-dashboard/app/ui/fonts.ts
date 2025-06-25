@@ -1,4 +1,4 @@
-// Use Georgia font by default
-export const georgia = {
-  className: 'font-georgia',
+// Use Arial font by default
+export const arial = {
+  className: 'font-arial',
 }; 
