@@ -1,0 +1,45 @@
+// File: /app/layout.tsx
+// This is your main application layout, acting like the overall building frame of your pie shop.
+
+import React from 'react';
+
+// This is the component for your root layout. It receives 'children',
+// which will be whatever page or nested layout is being rendered beneath it.
+export default function RootLayout({
+  children, // This 'children' will be the content from app/page.tsx OR dashboard/layout.tsx
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    // This outer div represents the main frame of your entire website.
+    // It has a blue border and light blue background, visually defining the Root Layout's boundaries.
+    <div style={{ border: '2px solid blue', padding: '10px', margin: '10px', background: '#e0f7fa' }}>
+
+      {/* This is the common header for ALL pages across your website.
+          It contains your main shop name and global navigation links. */}
+      <header style={{ background: 'navy', color: 'white', padding: '10px', textAlign: 'center' }}>
+        <h1>The Grand Pie Market of Mr. Super Slug</h1>
+        <nav style={{ marginTop: '5px' }}>
+          <a href="/" style={{ color: 'white', marginRight: '15px' }}>Home</a>
+          <a href="/dashboard" style={{ color: 'white' }}>Dashboard</a>
+        </nav>
+      </header>
+
+      {/* ******************************************************************
+      THIS IS THE ROOT LAYOUT'S MAIN CONTENT AREA (its {children} slot).
+      For the /dashboard route, Next.js will render the content of
+      'app/dashboard/layout.tsx' (the Dashboard Layout) RIGHT HERE.
+      ******************************************************************
+      */}
+      <main style={{ padding: '20px', border: '1px dashed blue', margin: '10px 0', background: 'white' }}>
+        {children} {/* This {children} will be filled by the DashboardLayout's output */}
+      </main>
+
+      {/* This is the common footer for ALL pages across your website. */}
+      <footer style={{ background: 'navy', color: 'white', padding: '10px', textAlign: 'center', fontSize: '0.8em' }}>
+        <p>© 2025 Grand Pie Market</p>
+      </footer>
+    </div>
+  );
+}
+
