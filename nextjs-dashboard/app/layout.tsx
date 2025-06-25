@@ -1,5 +1,5 @@
 import "@/app/ui/global.css";
-import { arial } from "@/app/ui/fonts";
+import { inter } from "@/app/ui/fonts";
 
 export default function RootLayout({
   children,
@@ -8,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${arial.className} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         {/* Root Layout's Header */}
         <div className="bg-blue-600 text-white p-4 text-center">
           <h1 className="text-xl font-bold">Root Layout Header</h1>
